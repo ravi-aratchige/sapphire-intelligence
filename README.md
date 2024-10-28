@@ -4,7 +4,7 @@ This is the AI application for Sapphire.
 
 ## Project Structure
 
-```
+```sh
 .
 ├── chat                          # Handles chat-related functionalities
 │   ├── agents.py                 # Defines various agent classes for chat handling
