@@ -1,2 +1,3 @@
-# sapphire-intelligence
-The brains behind Sapphire 💎
+# Sapphire Intelligence
+
+This is the AI application for Sapphire.
