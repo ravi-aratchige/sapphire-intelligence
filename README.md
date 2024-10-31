@@ -1,8 +1,12 @@
-# Sapphire Intelligence
+# Sapphire Intelligence 💎
 
-This is the AI application for Sapphire.
+Sapphire Intelligence is the brains behind [Sapphire](https://github.com/Caramel-Labs/CaramelLabs_Sapphire), the digital nomad's guide to Sri Lanka. 🇱🇰
 
-## Project Structure
+This project was developed to demonstrate the integration of multiple AI-related services to work in harmony and provide reasoning capabilities to software applications.
+
+Sapphire Intelligence features the use of LLMs and chat models for reasoning (context-aware [agent with tooling](https://python.langchain.com/v0.1/docs/modules/agents/agent_types/tool_calling/)) and content generation (intelligent experience generation for tourists) on LangChain infrastructure, as well as providing Sapphire with support for verifying the biometric data and content of its users' passports.
+
+## Project Structure 🌳
 
 ```sh
 .
@@ -27,10 +31,10 @@ This is the AI application for Sapphire.
 │   ├── prompts.py                # Contains prompt templates for experiences
 │   └── routes.py                 # Sets up experience-specific API routes
 │
-├── providers                     # Defines service providers (e.g., chat models)
-│   ├── chat_models.py            # Manages various chat model integrations
+├── providers                     # Defines LLM service providers
+│   ├── chat_models.py            # Manages chat model integrations
 │   ├── __init__.py               # Initializes the providers module
-│   └── llms.py                   # Manages large language model integrations
+│   └── llms.py                   # Manages LLM integrations
 │
 ├── schemas                       # Contains data schema definitions
 │   ├── experiences.py            # Schemas for experience-related data
@@ -55,3 +59,50 @@ This is the AI application for Sapphire.
 └── requirements.txt              # Lists dependencies required to run the application
 
 ```
+
+## Setup ⚙️
+
+To setup Sapphire Intelligence, clone this repository to a desired location on your system:
+
+```shell
+git clone https://github.com/ravi-aratchige/sapphire-intelligence.git
+```
+
+Navigate into the cloned directory:
+
+```shell
+cd sapphire-intelligence
+```
+
+Create a `.env` file within the root folder with the following content:
+
+```shell
+GROQ_API_KEY = "your-api-key"
+COHERE_API_KEY = "your-api-key"
+MONGO_URI_STRING = "your-mongo-uri"
+```
+
+To connect to LangSmith for observability, add the following content too:
+
+```shell
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+LANGCHAIN_API_KEY="your-api-key"
+LANGCHAIN_PROJECT="default"
+```
+
+Install the required packages:
+
+```shell
+pip install -r requirements.txt
+```
+
+Launch the FastAPI server:
+
+```shell
+fastapi dev main.py
+```
+
+---
+
+Built with ❤️ by [Ravindu Aratchige](ravi-aratchige.github.io).
